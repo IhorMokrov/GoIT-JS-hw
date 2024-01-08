@@ -12,7 +12,7 @@ const ordered = 50;
 
 let msg =
   total > ordered
-    ? "Order placed, a manager will contact you"
-    : "Insufficient goods in stock!";
+    ? 'Order placed, a manager will contact you'
+    : 'Insufficient goods in stock!';
 
 console.log(msg);
