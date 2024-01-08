@@ -19,14 +19,19 @@
 const ADMIN_PASSWORD = 'jqueryismyjam';
 let message;
 
-message = prompt('Enter the password');
+// Запрос пароля через prompt
+let userPassword = prompt('Введите пароль для авторизации:');
 
-// console.log(typeof message);
-
-if (!message) {
-  console.log('Canceled by user!');
-} else if (message === ADMIN_PASSWORD) {
-  console.log('Welcome!');
+if (userPassword === null) {
+  // Если пользователь нажал "Отмена"
+  message = 'Отменено пользователем!';
+} else if (userPassword === ADMIN_PASSWORD) {
+  // Если пароль введен верно
+  message = 'Добро пожаловать!';
 } else {
-  console.log('Access denied, wrong password!');
+  // Если пароль введен неверно
+  message = 'Доступ запрещен, неверный пароль!';
 }
+
+// Вывод результата через alert
+alert(message);
