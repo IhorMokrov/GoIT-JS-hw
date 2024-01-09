@@ -1,0 +1,52 @@
+@import './normalize';
+
+body {
+  padding: 8px;
+}
+
+.form-add {
+  display: block;
+  max-width: 400px;
+  border: 1px solid #8f8383;
+  padding: 10px;
+}
+
+.form-add__input-group {
+  margin-top: 10px;
+
+  display: flex;
+
+  height: 40px;
+}
+
+.form-add__input {
+  width: 260px;
+  height: 100%;
+}
+
+.form-add__button-add {
+  margin-left: 6px;
+  width: 60px;
+  height: 100%;
+}
+
+.form-add__result-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: end;
+}
+
+.form-add__result-text {
+}
+
+.form-add__result-value {
+  margin-left: 6px;
+}
+
+.form-add__reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+}

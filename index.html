@@ -5,17 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoIT-JS</title>
+    <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
-    <form>
-      <label
-        >Write some number below and Result will Add it:
-        <input type="number" placeholder="write number here"
-      /></label>
+    <form class="form-add">
+      <label class="form-add__label">
+        <span class="form-add__title"
+          >Write some number below and Result will Add it:</span
+        >
+        <div class="form-add__input-group">
+          <input
+            class="form-add__input"
+            type="number"
+            placeholder="your number"
+          />
+          <button class="form-add__button-add" type="submit">Add</button>
+        </div>
+      </label>
 
-      <button type="submit">Add</button>
-
-      <span>result = </span>
+      <div class="form-add__result-container">
+        <span class="form-add__result-text">result = </span
+        ><span class="form-add__result-value"> 0</span>
+      </div>
+      <button class="form-add__reset" type="button">reset</button>
     </form>
 
     <!-- <script src="./script/task-1.js" type="module"></script> -->
