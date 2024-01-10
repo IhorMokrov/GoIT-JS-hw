@@ -11,6 +11,8 @@
 
 let btnAdd = document.querySelector('form-add__button-add[type="submit"]');
 
+console.log(btnAdd);
+
 btnAdd.addEventListener('click', function () {
   alert('he');
 });
