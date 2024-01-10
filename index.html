@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
+    <p>Task #6:</p>
     <form class="form-add">
       <label class="form-add__label">
         <span class="form-add__title"
-          >Write some number below and Result will Add it:</span
+          >Write a number below, and the result will be added to it:</span
         >
         <div class="form-add__input-group">
           <input
@@ -19,7 +20,7 @@
             type="text"
             placeholder="your number"
           />
-          <button class="form-add__button-add" type="submit">Add</button>
+          <button class="form-add__button-add" type="button">Add</button>
         </div>
       </label>
 
@@ -35,7 +36,31 @@
     <!-- <script src="./script/task-3.js" type="module"></script> -->
     <!-- <script src="./script/task-4.js" type="module"></script> -->
     <!-- <script src="./script/task-5.js" type="module"></script> -->
-    <script src="./script/task-6.js" type="module"></script>
-    <script src="./script/test.js" type="module"></script>
+    <!-- <script src="./script/task-6.js" type="module"></script> -->
+    <!-- <script src="./script/test.js" type="module"></script> -->
+
+    <script type="module">
+      const output = document.querySelector('.form-add__result-value');
+      const btnAdd = document.querySelector(
+        '.form-add__button-add[type="button"]',
+      );
+      const inputField = document.querySelector(
+        '.form-add__input[type="text"]',
+      );
+
+      btnAdd.addEventListener('click', function () {
+        let inputValue = Number(inputField.value);
+        if (!isNaN(inputValue)) {
+          output.textContent = Number(output.textContent) + inputValue;
+        } else output.textContent;
+      });
+
+      // reset option:
+
+      const resetBtn = document.querySelector('.form-add__reset');
+      resetBtn.addEventListener('click', function () {
+        output.textContent = 0;
+      });
+    </script>
   </body>
 </html>
